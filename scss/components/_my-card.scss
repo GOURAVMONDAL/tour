@@ -1,0 +1,143 @@
+.my-card{
+    width: 100%;
+    height:50rem;
+    border:3px;
+    color:$color-white;
+    font-size:2rem;
+    // transition:5s;
+    perspective: 100rem;
+    position: relative;
+    margin-bottom:3rem;
+
+    & > *{
+        backface-visibility: hidden;
+        width:100%;
+        height:50rem;
+    }
+    
+    &__front{
+        background-color:$color-white;
+        position: absolute;
+        top:0;
+        left:0;
+        transition:.6s;
+    }
+
+    &:hover &__front{
+        transform:rotateY(-180deg);
+    }
+    &__back{
+        position: absolute;
+        top:0;
+        left:0;
+        transform:rotateY(180deg);
+        transition:.6s;
+
+        &--1{
+            background-image:linear-gradient(to right bottom,$color-primary,$color-secondary);
+        }
+
+        &--2{
+            background-image:linear-gradient(to right bottom,$color-primary-2,$color-secondary-2);
+        }
+
+        &--3{
+            background-image:linear-gradient(to right bottom,$color-primary-3,$color-secondary-3);
+        }
+    }
+
+    &:hover &__back{
+        transform:rotateY(0);
+    }
+
+    &__img{
+        background-size:cover;
+        -webkit-background-blend-mode:screen;
+        background-blend-mode:screen;
+        height:24rem;
+        width:100%;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+
+
+        &--1{
+            background-image:linear-gradient(to right bottom,$color-primary,$color-secondary),url(../img/nat-5.jpg);
+        }
+
+        &--2{
+            background-image:linear-gradient(to right bottom,$color-primary-2,$color-secondary-2),url(../img/nat-6.jpg);
+        }
+
+        &--3{
+            background-image:linear-gradient(to right bottom,$color-primary-3,$color-secondary-3),url(../img/nat-7.jpg);
+        }
+
+
+    }
+
+    &__heading{
+        padding:1rem 1.4rem;
+            position: absolute;
+            top: 18rem;
+            width: auto;
+            right: 10%;
+            height: auto;
+            color: $color-white;
+            text-transform:uppercase;
+            
+        &--1{
+            background-image:linear-gradient(to right,rgba($color-secondary,.8),rgba($color-primary,.9));
+        }
+
+        &--2{
+            background-image:linear-gradient(to right,rgba($color-secondary-2,.8),rgba($color-primary-2,.9));
+        }
+
+        &--3{
+            background-image:linear-gradient(to right,rgba($color-secondary-3,.8),rgba($color-primary-3,.9));
+        }
+    }
+
+    &__info{
+        color: #777;
+        font-size: 1.3rem;
+        height: auto;
+        width: auto;
+        padding-top:4rem;
+
+    }
+
+    &__list{
+        list-style:none;
+        padding-left:3rem;
+        padding-right:3rem;
+
+        text-align: center;
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-bottom:1rem;
+            border-bottom:1px solid rgba(226, 226, 226, 0.877);
+            padding-bottom:1rem;
+        }
+    }
+
+    &__box{
+        @include center-content;
+        text-align: center;
+
+        &-only{
+            font-size:1.6rem;
+            font-weight:700;
+            margin-bottom:2rem;
+        }
+
+        &-price{
+            font-size:6rem;
+            font-weight: 300;
+            margin-bottom:5rem;
+        }
+    }
+    
+}

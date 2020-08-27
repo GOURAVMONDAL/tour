@@ -1,0 +1,22 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:62.5%;
+
+    @media(max-width:992px){
+        font-size:55%;
+    }
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight:400;
+    padding:3rem;
+    line-height:1.7;
+    box-sizing:border-box;
+    color:$color-grey-1;
+}

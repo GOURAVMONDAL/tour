@@ -1,0 +1,88 @@
+.section-tour{
+    padding-top:25rem;
+    padding-bottom:25rem;
+    margin-top:-19rem;
+    z-index: -1;
+    background-color: #f5f5f5;
+
+    &__img{
+        
+        & > *{
+            box-shadow:0 1rem 3rem rgba($color-black,.3);
+        }
+    }
+
+    &__img-single{
+        width:50%;
+        transition:.2s;
+        
+
+        &--1{
+            position:absolute;
+            top:0;
+            left:-2rem;
+
+           
+        }
+
+        &--2{
+            position: absolute;
+            top:7rem;
+            left:4rem;
+        }
+
+        &--3{
+            position: relative;
+            top:1rem;
+            left:4rem;
+            
+        }
+        &:hover{
+            transform:scale(1.2);
+            outline: .8rem solid $color-primary;
+            outline-offset:1rem;
+            z-index:100;
+        }
+        
+    
+    }
+
+    &__img:hover &__img-single:not(:hover){
+        transform:scale(.94);
+    }
+}
+
+.section-feature{
+    margin-top:-12rem;
+
+    margin-bottom:8rem;
+    background-image:linear-gradient(to right bottom,rgba($color-primary,.5),rgba($color-secondary,.7)),url(../img/nat-4.jpg);
+    background-size:cover;
+    background-position:center;
+    padding:20rem 0;
+    transform:skewY(-10deg);
+
+    & > *{
+        transform:skewY(10deg);
+    }
+}
+
+.section-card{
+    background-color:#f5f5f5;
+    padding:20rem 0;
+    margin-top:-16rem;
+    text-align: center;
+}
+
+.section-stories{
+    padding:15rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-booking{
+    background-color:$color-primary;
+    padding:8rem;
+    
+    
+}
